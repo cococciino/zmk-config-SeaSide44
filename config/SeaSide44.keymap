@@ -19,19 +19,21 @@
 };
 
 /*マウスキーを押したらタイムアウトを延長する*/ 
-/*&mkp_input_listener {
+&mkp_input_listener {
     input-processors = <&zip_temp_layer 4 180>;
-};*/
+};
 
+/*
 &sl {
     release-after-ms = <180>;
 };
+*/ 
 
 / {
     combos { compatible = "zmk,combos"; };
 
     macros {
-        macros_left_click: macros_left_click {
+ /*       macros_left_click: macros_left_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
@@ -45,6 +47,7 @@
 
             label = "MACRO_LEFT_CLICK";
         };
+*/ 
 
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
