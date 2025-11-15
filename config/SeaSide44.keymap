@@ -18,25 +18,17 @@
     quick-tap-ms = <300>;
 };
 
-<<<<<<< HEAD
-/*マウスキーを押したらタイムアウトを延長する*/ 
-&mkp_input_listener {
-=======
+
 /*マウスキーを押したらタイムアウトを延長する*/
-/*&mkp_input_listener {
->>>>>>> be73b52d76579af2becc200eebae8dbb30546d54
+&mkp_input_listener {
     input-processors = <&zip_temp_layer 4 180>;
 };
 
-<<<<<<< HEAD
 /*
 &sl {
     release-after-ms = <180>;
 };
 */ 
-=======
-&sl { release-after-ms = <180>; };
->>>>>>> be73b52d76579af2becc200eebae8dbb30546d54
 
 / {
     combos { compatible = "zmk,combos"; };
