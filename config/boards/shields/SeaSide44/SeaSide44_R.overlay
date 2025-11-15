@@ -19,17 +19,17 @@
 };
 
 /*非マウスキーを押したらタイムアウトに関係なくマウスレイヤーを抜ける*/ 
-/*&zip_temp_layer {
+&zip_temp_layer {
     excluded-positions = <
         19 // J or L
         21 // J or L
     >;
-};*/
+};
 
 /*マウスキーを押したらタイムアウトを延長する*/ 
-/*&mkp_input_listener {
+&mkp_input_listener {
     input-processors = <&zip_temp_layer 4 350>;
-};*/
+};
 
 /*キー入力中のオートマウスレイヤー誤爆防止*/ 
 /*&zip_temp_layer {
