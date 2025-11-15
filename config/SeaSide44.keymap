@@ -18,23 +18,21 @@
     quick-tap-ms = <300>;
 };
 
-
 /*マウスキーを押したらタイムアウトを延長する*/
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 4 180>;
-};
+
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 180>; };
 
 /*
 &sl {
     release-after-ms = <180>;
 };
-*/ 
+*/
 
 / {
     combos { compatible = "zmk,combos"; };
 
     macros {
- /*       macros_left_click: macros_left_click {
+        /*       macros_left_click: macros_left_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -48,7 +46,7 @@
 
             label = "MACRO_LEFT_CLICK";
         };
-*/ 
+*/
 
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -74,10 +72,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp Q             &kp W         &kp E         &kp R                      &kp T                                              &kp Y        &kp U  &kp I            &kp O       &kp P      &kp BACKSPACE
-&kp TAB     &kp A             &kp S         &kp D         &kp F                      &kp G                                              &kp H        &kp J  &kp K            &kp L       &kp MINUS  &kp ENTER
-&kp LCTRL   &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B                                              &kp N        &kp M  &kp COMMA        &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-                              &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 5 LANG1    &mt RIGHT_SHIFT LANG1  &lt 2 ENTER         &kp PRINTSCREEN
+&kp ESCAPE  &kp Q  &kp W         &kp E         &kp R                      &kp T                                                  &kp Y        &kp U  &kp I            &kp O       &kp P      &kp BACKSPACE
+&kp TAB     &kp A  &kp S         &kp D         &kp F                      &kp G                                                  &kp H        &kp J  &kp K            &kp L       &kp MINUS  &kp ENTER
+&kp LCTRL   &kp Z  &kp X         &kp C         &kp V                      &kp B                                                  &kp N        &kp M  &kp COMMA        &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
+                   &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 5 LANG1    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER         &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
