@@ -1,5 +1,6 @@
 #include "SeaSide44.dtsi"
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h> //カーソル反転用
 
 &default_transform {
     col-offset = <6>;
@@ -90,3 +91,8 @@
     };
 };
 
+
+/*X軸 Y軸の反転*/
+&trackball_listener {
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+};
