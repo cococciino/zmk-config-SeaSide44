@@ -37,8 +37,8 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
-         input-processors = <&zip_temp_layer 4 1200>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        input-processors = <&zip_temp_layer 4 1200>;
 
     };
 };
@@ -89,10 +89,4 @@
         //automouse-layer = <4>; //ここをコメントアウトするとオートマウスレイヤーがオフになる
         scroll-layers = <5>;
     };
-};
-
-
-/*X軸 Y軸の反転*/
-&trackball_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
